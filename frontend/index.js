@@ -35,7 +35,11 @@ async function sendFile(img, file) {
   .then((blob) => {
     newFile = blob;
   });
-
+  const a = document.querySelector('.download');
+  const url = window.URL.createObjectURL(newFile);
+  a.href = url;
+  a.click();
+  window.URL.revokeObjectURL(url);
   loadImg(newFile, img);
 }
 
