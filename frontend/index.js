@@ -25,7 +25,7 @@ async function sendFile(img, file) {
   const fd = new FormData();
   fd.append('uploadFile', file);
   let newFile = undefined
-  await fetch('http://localhost:3000/', {
+  await fetch('http://45.130.151.203:3000/', {
     method: 'POST',
     body: fd
   })
